@@ -3,6 +3,10 @@ using System;
 
 public partial class PlayerMain : CharacterBody2D
 {
+    //create an animated sprite object that will handle playing sprite asset animations
+    AnimationPlayer _playerAnimation;
+
+    #region PlayerMain Properties
     [Export]
     int speed { get; set; } = 600;
 
@@ -11,11 +15,19 @@ public partial class PlayerMain : CharacterBody2D
 
     [Export]
     int playerHitPoints { get; set; } = 30;
+    #endregion PlayerMain Properties
 
+    public override void _Ready()
+    {
+        GetTreeAndTypes();
+        //recieve the node that will be using the animation
+        //_animation2D = GetNode
+    }
 
     public override void _PhysicsProcess(double delta)
     {
         GetInput();
+        AnimatePlayerBody();
         MoveAndSlide();
     }
 
@@ -28,13 +40,28 @@ public partial class PlayerMain : CharacterBody2D
         return Velocity;
     }
 
+    public void AnimatePlayerBody()
+    {
+        //doing get node on another node retrieves its child
+        _playerAnimation = GetNode<Node2D>("HappyBoo").GetNode<AnimationPlayer>("AnimationPlayer");
+        _playerAnimation.Play("walk");
+    }
 
-    #endregion
+
+    #endregion Custom Player Functions
 
     #region signal delegates
     //[Signal]
     //public delegate void NameChangeEventHandler();
-    
+
     #endregion signal delegates
+
+    #region DevFunctions
+
+    public void GetTreeAndTypes()
+    {
+    }
+
+    #endregion
 
 }
