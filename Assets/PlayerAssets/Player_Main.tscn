@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c20l2e8rbue3o"]
+[gd_scene load_steps=5 format=3 uid="uid://c20l2e8rbue3o"]
 
 [ext_resource type="Script" uid="uid://bdfbuxwtdq2ui" path="res://Assets/PlayerAssets/Scripts/PlayerMain.cs" id="1_3nbi7"]
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://Assets/2d-project-start/characters/happy_boo/happy_boo.tscn" id="2_eylbf"]
-[ext_resource type="Script" path="res://Assets/PlayerAssets/Scripts/happy_boo.gd" id="3_3nbi7"]
 [ext_resource type="Script" uid="uid://bdgoybruhh0q3" path="res://Assets/PlayerAssets/Scripts/PlayerLabel.cs" id="3_ie0vr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w4b7e"]
@@ -13,7 +12,6 @@ script = ExtResource("1_3nbi7")
 
 [node name="HappyBoo" parent="." instance=ExtResource("2_eylbf")]
 position = Vector2(1, -1)
-script = ExtResource("3_3nbi7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -47)
