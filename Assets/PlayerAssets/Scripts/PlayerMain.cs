@@ -3,31 +3,60 @@ using System;
 
 public partial class PlayerMain : CharacterBody2D
 {
-    //create an animated sprite object that will handle playing sprite asset animations
-    AnimationPlayer _playerAnimation;
+    //these are player properties. These are what defines some of the players attributes
+    //think of what attributes you have on your own. 
+
+    /*
+     * As a person you have:
+     *   -Walk Speed, Run speed, and you can stop in place (speed varience)
+     *   -You can interact with your enviornemnt
+     *   -You can get hurt and lose life force (for real life its blood, for characters its endurance/hp representing
+     *   what stress they can endure before they passout/croak
+    */
+
 
     #region PlayerMain Properties
     [Export]
-    int speed { get; set; } = 600;
+    int Speed { get; set; } = 600;
 
     [Export]
-    string playerName { get; set; }
+    string PlayerName { get; set; }
 
     [Export]
-    int playerHitPoints { get; set; } = 30;
+    int PlayerHitPoints { get; set; } = 30;
     #endregion PlayerMain Properties
+
+    //Will provide the base node with animation in it from the _Ready() function
+    //This will also provide flexibility such as changing ground shadow and such. 
+    Node2D baseAnimationNode;
+
 
     public override void _Ready()
     {
-        GetTreeAndTypes();
-        //recieve the node that will be using the animation
-        //_animation2D = GetNode
+        baseAnimationNode = GetNode <Node2D>("HappyBoo");
     }
+
+    //These are functions. Functions commonly have thse base characteristics:
+
+    /*
+     * [Access modifier]  [Return type (can be void if returning nothing)]  [Name]      [Arguments] examnple (int a, string b...ect)
+     * 
+     * So a function could simply be public int CalculateSum (int input1, int input2){}
+     * 
+     * Functions also consist of a code body that comes in brackets so say in CalculateSum()
+     * 
+     * {
+     *      Return input 1 + input 2;
+     * }
+    */
+
 
     public override void _PhysicsProcess(double delta)
     {
         GetInput();
-        AnimatePlayerBody();
+
+        AnimatePlayerBody(doAnimate: (Velocity.Length() > 0.0f || Velocity.Length() < 0.0f));
+
         MoveAndSlide();
     }
 
@@ -35,16 +64,22 @@ public partial class PlayerMain : CharacterBody2D
     public Vector2 GetInput()
     {
         Vector2 inputDirection = Input.GetVector("GD_Left", "GD_Right", "GD_Up", "GD_Down");
-        Velocity = inputDirection * speed;
+        Velocity = inputDirection * Speed;
 
         return Velocity;
     }
 
-    public void AnimatePlayerBody()
+    public void AnimatePlayerBody(bool doAnimate)
     {
-        //doing get node on another node retrieves its child
-        _playerAnimation = GetNode<Node2D>("HappyBoo").GetNode<AnimationPlayer>("AnimationPlayer");
-        _playerAnimation.Play("walk");
+        //retrieving animation node here from the base node. 
+        if (doAnimate)
+        {
+            baseAnimationNode.GetNode<AnimationPlayer>("AnimationPlayer").Play("walk");
+        }
+        else 
+        {
+            baseAnimationNode.GetNode<AnimationPlayer>("AnimationPlayer").Play("idle");
+        }
     }
 
 
