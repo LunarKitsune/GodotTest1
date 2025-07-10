@@ -9,8 +9,8 @@ This particular markdown file will skim over the basics of coding, and then the 
 README files as the tutorial works more with different objects, properties, and interactive elements that we will<br>
 be giving players. 
 
-However, I will give you resources just in case if you are going to use either C# or Godot, as well as a link to <br>
-the Godot main page documents here:
+<span style="color: red">However, I will give you resources just in case if you are going to use either C# or Godot, as well as a link to <br>
+the Godot main page documents here:</span>
 
 1. [C# Basics](https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/tutorials/)
 2. [Godot Game Engine Documentation](https://docs.godotengine.org/en/stable/index.html)
