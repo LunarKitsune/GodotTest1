@@ -12,14 +12,30 @@ be giving players.
 However, I will give you resources just in case if you are going to use either C# or Godot, as well as a link to
 the Godot main page documents here:
 
-	C# Basics
-	Godot Game Engine Documentation
-		Latest version 4.4 as of the writing of this .md file on 7/9/2025
-	Godot Language Scripting
-		Yes still in the docs, but would rather put a direct link here as for easier reference.
+ - [C# introductory programming by Microsoft](https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/tutorials/)
+ - [GD Scripting (godot programming) documentation](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/index.html)
+ - [Introductiont to Godot Engine](https://docs.godotengine.org/en/stable/getting_started/introduction/index.html)
 
 With that out of the way we can get started...
 
-===== Coding Basics =====
+===== Table of Contents =====
+<br> 01. Coding Basics
+<br>*    01.1 Variables
+<br>*    01.2 Objects and Types
+<br>*    01.3 Functions
+<br>*    01.4 Control Flows
+<br>*    01.5 Classes (object frameworks)
+<br>
+<br> 02 Godot Basics
+
+===== 01. Coding Basics =====
+
+At the very least to start this tutorial and get to know how to read code
+we need to know some coding basics. The coding basics I will go over are:
+	<br>- Variables
+  	<br>- Objects and Types
+   	<br>- Functions
+    	<br>- Control Flows
+     	<br>- Classes (object frameworks)
 
 ===== Godot Basics =====
