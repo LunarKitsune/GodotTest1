@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\EnemyMobSlime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EnemyMobSlime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Assets\\2d-project-start\\characters\\slime\\SlimeAnimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\2d-project-start\\characters\\slime\\SlimeAnimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|c:\\users\\chico\\desktop\\gamedev\\godot\\repositories\\test1\\assets\\enemyassets\\slimeassets\\enemymobslime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|solutionrelative:assets\\enemyassets\\slimeassets\\enemymobslime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|c:\\users\\chico\\desktop\\gamedev\\godot\\repositories\\test1\\assets\\playerassets\\scripts\\playermain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,19 +39,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EnemyMobSlime.cs",
-              "DocumentMoniker": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\EnemyMobSlime.cs",
-              "RelativeDocumentMoniker": "EnemyMobSlime.cs",
-              "ToolTip": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\EnemyMobSlime.cs",
-              "RelativeToolTip": "EnemyMobSlime.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Title": "SlimeAnimation.cs",
+              "DocumentMoniker": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Assets\\2d-project-start\\characters\\slime\\SlimeAnimation.cs",
+              "RelativeDocumentMoniker": "Assets\\2d-project-start\\characters\\slime\\SlimeAnimation.cs",
+              "ToolTip": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Assets\\2d-project-start\\characters\\slime\\SlimeAnimation.cs",
+              "RelativeToolTip": "Assets\\2d-project-start\\characters\\slime\\SlimeAnimation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T01:45:05.748Z",
+              "WhenOpened": "2025-07-15T03:30:15.939Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "EnemyMobSlime.cs",
+              "DocumentMoniker": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Assets\\EnemyAssets\\SlimeAssets\\EnemyMobSlime.cs",
+              "RelativeDocumentMoniker": "Assets\\EnemyAssets\\SlimeAssets\\EnemyMobSlime.cs",
+              "ToolTip": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Assets\\EnemyAssets\\SlimeAssets\\EnemyMobSlime.cs",
+              "RelativeToolTip": "Assets\\EnemyAssets\\SlimeAssets\\EnemyMobSlime.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T03:24:55.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "EnemySlime.cs",
               "DocumentMoniker": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Assets\\2d-project-start\\characters\\slime\\EnemySlime.cs",
               "RelativeDocumentMoniker": "Assets\\2d-project-start\\characters\\slime\\EnemySlime.cs",
@@ -55,12 +72,11 @@
               "RelativeToolTip": "Assets\\2d-project-start\\characters\\slime\\EnemySlime.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAgwCAAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T00:52:32.733Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-15T00:52:32.733Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PlayerMain.cs",
               "DocumentMoniker": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Assets\\PlayerAssets\\Scripts\\PlayerMain.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerAssets\\Scripts\\PlayerMain.cs",
@@ -68,12 +84,11 @@
               "RelativeToolTip": "Assets\\PlayerAssets\\Scripts\\PlayerMain.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAgwDUAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T16:29:05.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-08T16:29:05.051Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "HpLabel.cs",
               "DocumentMoniker": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Assets\\PlayerAssets\\Scripts\\HpLabel.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerAssets\\Scripts\\HpLabel.cs",
@@ -85,7 +100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "HpLabel.cs",
               "DocumentMoniker": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\HpLabel.cs",
               "RelativeDocumentMoniker": "HpLabel.cs",
