@@ -25,4 +25,4 @@ position = Vector2(238, 116)
 position = Vector2(757, 415)
 
 [node name="EnemyMobSlime" parent="." instance=ExtResource("3_f8rkf")]
-position = Vector2(945, 269)
+position = Vector2(971, 219)
