@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ogik4s70pgwl" path="res://Assets/2d-project-start/characters/slime/slime.tscn" id="1_k3fw2"]
 [ext_resource type="Script" uid="uid://miyulrx4v7kb" path="res://Assets/EnemyAssets/SlimeAssets/EnemyMobSlime.cs" id="2_a361n"]
-[ext_resource type="Script" uid="uid://ptdwww4ot5e3" path="res://Assets/2d-project-start/characters/slime/SlimeAnimation.cs" id="3_50hjk"]
+[ext_resource type="Script" uid="uid://ptdwww4ot5e3" path="res://Assets/EnemyAssets/SlimeAssets/SlimeAnimation.cs" id="3_50hjk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_73bb0"]
 radius = 50.0
