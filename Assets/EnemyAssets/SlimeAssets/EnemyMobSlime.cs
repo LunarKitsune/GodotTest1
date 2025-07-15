@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Diagnostics;
 using System.Drawing;
 
 public partial class EnemyMobSlime : CharacterBody2D, IMob
@@ -11,18 +12,18 @@ public partial class EnemyMobSlime : CharacterBody2D, IMob
     [Export]
     public int Speed { get; set; } = 300;
     [Export]
-    public string MonsterName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public string Description { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public string MonsterName { get; set; }
+    public string Description { get; set; }
     [Export]
-    public int HPMax { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public int HPMax { get; set; }
     [Export]
-    public int Attack { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public int Attack { get; set; }
     [Export]
-    public int Defense { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public int Defense { get; set; }
 
     public override void _Ready()
     {
-        
+        PlayerPosition = GetNode<CharacterBody2D>("/root/Game/Player");
     }
 
     public override void _PhysicsProcess(double delta)
@@ -33,9 +34,30 @@ public partial class EnemyMobSlime : CharacterBody2D, IMob
     public void PathfindToPlayer()
     {
         var direction = GlobalPosition.DirectionTo(PlayerPosition.GlobalPosition);
-        Velocity = direction * Speed;
+        var distance = GlobalPosition.DistanceTo(PlayerPosition.GlobalPosition);
+
+        if (distance < 500)
+        {
+            Velocity = direction * Speed;
+
+            GetAnimation("walk");
+        }
+        else
+        {
+            Velocity = direction * 0;
+            GetAnimation("idle");
+        }
+
+        GD.Print($"Slime Velocity: {Velocity}  distance: {distance}");
         MoveAndSlide();
     }
+
+    public void GetAnimation(string animationName)
+    {
+        GetNode<AnimationPlayer>("Slime/EntityAnimationPlayer").Play(animationName);
+        
+    }
+   
 
 
 }
