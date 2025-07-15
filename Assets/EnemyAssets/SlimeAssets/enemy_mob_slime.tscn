@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bp2epwompibjk"]
 
 [ext_resource type="PackedScene" uid="uid://ogik4s70pgwl" path="res://Assets/2d-project-start/characters/slime/slime.tscn" id="1_k3fw2"]
-[ext_resource type="Script" uid="uid://dmvw0yst8btd0" path="res://Assets/2d-project-start/characters/slime/EnemySlime.cs" id="2_xo10o"]
+[ext_resource type="Script" uid="uid://miyulrx4v7kb" path="res://Assets/EnemyAssets/SlimeAssets/EnemyMobSlime.cs" id="2_a361n"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_73bb0"]
 radius = 50.0
@@ -10,7 +10,7 @@ height = 100.0
 [node name="EnemyMobSlime" type="CharacterBody2D"]
 
 [node name="Slime" parent="." instance=ExtResource("1_k3fw2")]
-script = ExtResource("2_xo10o")
+script = ExtResource("2_a361n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -34)
