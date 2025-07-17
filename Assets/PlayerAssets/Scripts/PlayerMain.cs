@@ -15,8 +15,7 @@ public partial class PlayerMain : CharacterBody2D
     */
 
 
-    #region PlayerMain Properties
-    [Export]
+    #region PlayerMain Properties\
     int Speed { get; set; } = 600;
 
     [Export]
@@ -24,10 +23,14 @@ public partial class PlayerMain : CharacterBody2D
 
     [Export]
     int PlayerHitPoints { get; set; } = 30;
+
+    [Export]
+    bool invicibilityOn { get; set; } = false;
     #endregion PlayerMain Properties
 
+
     //Will provide the base node with animation in it from the _Ready() function
-    //This will also provide flexibility such as changing ground shadow and such. 
+    //This will also provide flexibility such as changing ground shadow and such.
     Node2D baseAnimationNode;
 
 
@@ -82,12 +85,20 @@ public partial class PlayerMain : CharacterBody2D
         }
     }
 
+    //Thinking of making this for a hostile entity and we will check if they have damage collision
+    //if they do then we will determine what the enemy strength is (provided there is one) and
+    //deduct from the player's health. 
+    void HurtPlayer(CharacterBody2D hostileEntity)
+    {
+
+    }
+
 
     #endregion Custom Player Functions
 
     #region signal delegates
     //[Signal]
-    //public delegate void NameChangeEventHandler();
+    public delegate void PlayerCollisionHurtHandler();
 
     #endregion signal delegates
 
