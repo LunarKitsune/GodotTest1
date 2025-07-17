@@ -28,6 +28,11 @@ public partial class PlayerMain : CharacterBody2D
     bool invicibilityOn { get; set; } = false;
     #endregion PlayerMain Properties
 
+<<<<<<< Updated upstream
+=======
+    [Export]
+    bool isInvincible { get; set; };
+>>>>>>> Stashed changes
 
     //Will provide the base node with animation in it from the _Ready() function
     //This will also provide flexibility such as changing ground shadow and such.
