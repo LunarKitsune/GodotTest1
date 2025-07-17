@@ -79,9 +79,13 @@
               "Title": "PlayerMain.cs",
               "DocumentMoniker": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Assets\\PlayerAssets\\Scripts\\PlayerMain.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerAssets\\Scripts\\PlayerMain.cs",
-              "ToolTip": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Assets\\PlayerAssets\\Scripts\\PlayerMain.cs*",
-              "RelativeToolTip": "Assets\\PlayerAssets\\Scripts\\PlayerMain.cs*",
+              "ToolTip": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Assets\\PlayerAssets\\Scripts\\PlayerMain.cs",
+              "RelativeToolTip": "Assets\\PlayerAssets\\Scripts\\PlayerMain.cs",
+<<<<<<< Updated upstream
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwBsAAAAuAAAAAAAAAA==",
+=======
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwB0AAAAkAAAAAAAAAA==",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-08T16:29:05.051Z",
               "EditorCaption": ""
