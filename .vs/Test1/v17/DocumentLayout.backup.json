@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|c:\\users\\chico\\desktop\\gamedev\\godot\\repositories\\test1\\assets\\playerassets\\scripts\\playermain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|solutionrelative:assets\\playerassets\\scripts\\playermain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|c:\\users\\chico\\desktop\\gamedev\\godot\\repositories\\test1\\assets\\enemyassets\\slimeassets\\enemymobslime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|solutionrelative:assets\\enemyassets\\slimeassets\\enemymobslime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|c:\\users\\chico\\desktop\\gamedev\\godot\\repositories\\test1\\assets\\enemyassets\\slimeassets\\slimeanimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|solutionrelative:assets\\enemyassets\\slimeassets\\slimeanimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|c:\\users\\chico\\desktop\\gamedev\\godot\\repositories\\test1\\assets\\playerassets\\scripts\\playermain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|solutionrelative:assets\\playerassets\\scripts\\playermain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|c:\\users\\chico\\desktop\\gamedev\\godot\\repositories\\test1\\assets\\interfacescripts\\imob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "SlimeAnimation.cs",
               "DocumentMoniker": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Assets\\EnemyAssets\\SlimeAssets\\SlimeAnimation.cs",
               "RelativeDocumentMoniker": "Assets\\EnemyAssets\\SlimeAssets\\SlimeAnimation.cs",
@@ -46,8 +46,7 @@
               "RelativeToolTip": "Assets\\EnemyAssets\\SlimeAssets\\SlimeAnimation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T05:49:27.863Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-15T05:49:27.863Z"
             },
             {
               "$type": "Document",
@@ -59,12 +58,11 @@
               "RelativeToolTip": "Assets\\InterfaceScripts\\IMob.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T05:07:07.454Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-15T05:07:07.454Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "EnemyMobSlime.cs",
               "DocumentMoniker": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Assets\\EnemyAssets\\SlimeAssets\\EnemyMobSlime.cs",
               "RelativeDocumentMoniker": "Assets\\EnemyAssets\\SlimeAssets\\EnemyMobSlime.cs",
@@ -77,13 +75,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "PlayerMain.cs",
               "DocumentMoniker": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Assets\\PlayerAssets\\Scripts\\PlayerMain.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerAssets\\Scripts\\PlayerMain.cs",
-              "ToolTip": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Assets\\PlayerAssets\\Scripts\\PlayerMain.cs",
-              "RelativeToolTip": "Assets\\PlayerAssets\\Scripts\\PlayerMain.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Assets\\PlayerAssets\\Scripts\\PlayerMain.cs*",
+              "RelativeToolTip": "Assets\\PlayerAssets\\Scripts\\PlayerMain.cs*",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBsAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-08T16:29:05.051Z",
               "EditorCaption": ""
