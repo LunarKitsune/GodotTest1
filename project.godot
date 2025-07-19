@@ -19,6 +19,19 @@ config/icon="res://icon.svg"
 
 project/assembly_name="Test1"
 
+[file_customization]
+
+folder_colors={
+"res://Characters/EnemyAssets/": "blue",
+"res://Characters/EnemyAssets/SlimeAssets/Scripts/": "purple",
+"res://Characters/PlayerAssets/": "blue",
+"res://Characters/PlayerAssets/Scripts/": "purple",
+"res://Characters/PlayerAssets/Weapons/": "yellow",
+"res://EnviornmentAssets/": "blue",
+"res://InterfaceScripts/": "purple",
+"res://UIAssets/": "blue"
+}
+
 [input]
 
 GD_Left={
