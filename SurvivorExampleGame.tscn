@@ -29,3 +29,9 @@ position = Vector2(971, 219)
 
 [node name="Player" parent="." instance=ExtResource("1_wlncp")]
 position = Vector2(338, 273)
+
+[node name="EnemyMobSlime2" parent="." instance=ExtResource("3_f8rkf")]
+position = Vector2(872, 96)
+
+[node name="EnemyMobSlime3" parent="." instance=ExtResource("3_f8rkf")]
+position = Vector2(960, 361)

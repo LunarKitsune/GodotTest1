@@ -67,7 +67,7 @@ public partial class PlayerMain : CharacterBody2D
     {
         GetInput();
 
-        RoateGunAroundPlayer(GunOffset); 
+        RoateGun(GunOffset); 
 
         MoveAndSlide();
     }
@@ -94,31 +94,24 @@ public partial class PlayerMain : CharacterBody2D
         }
     }
 
-    public void RoateGunAroundPlayer(float offset)
+    public void RoateGun(float offset)
     {
         Area2D playerWeapon = GetNode<Area2D>("Gun");
 
         var direction = GlobalPosition.DirectionTo(GetGlobalMousePosition());
         var distance = GlobalPosition.DistanceTo(GetGlobalMousePosition());
 
-        //if (Math.Abs((GetGlobalMousePosition().Y - Position.Y)) >= 50 && Math.Abs((GetGlobalMousePosition().X - Position.X)) >=50)
-        //{
-        //    refPosition = GetGlobalMousePosition() - Position;
-        //    refPosition.X = Math.Clamp(refPosition.X, -50.0f, 50.0f);
-        //    refPosition.Y = Math.Clamp(refPosition.Y, -50.0f, 50.0f);
-        //}
+
+        
         playerWeapon.Position = direction * offset;
 
-        //if (refPosition.X < 0)
-        //{
+        //===WILl POSSIBLY COME BACK TO THIS ROTATION METHOD LATER===
+        //playerWeapon.RotationDegrees = (360 * distance);
+        //playerWeapon.Rotate(RotationDegrees);
 
-        //}
-        //else { }
-        //if (refPosition.Y < 0)
-        //{
+        //GD.Print($"rotation {playerWeapon.Rotation}");
 
-        //}
-        //else { }
+
     }
 
     //Thinking of making this for a hostile entity and we will check if they have damage collision
