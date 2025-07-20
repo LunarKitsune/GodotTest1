@@ -48,8 +48,6 @@ public partial class EnemyMobSlime : CharacterBody2D, IMob
             GetAnimation("idle");
         }
 
-        GD.Print($"Slime Velocity: {Velocity}  distance: {distance}");
-        MoveAndSlide();
     }
 
     public void GetAnimation(string animationName)
