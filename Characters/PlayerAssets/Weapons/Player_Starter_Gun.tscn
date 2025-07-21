@@ -11,7 +11,13 @@ radius = 469.835
 position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_6oekb")
 
-[node name="GunWeaponType" type="Sprite2D" parent="."]
+[node name="WeaponPivot" type="Marker2D" parent="."]
+
+[node name="GunWeaponType" type="Sprite2D" parent="WeaponPivot"]
 position = Vector2(1, -1)
 scale = Vector2(0.871428, 1.06)
 texture = ExtResource("1_iadc8")
+
+[node name="ShootingPoint" type="Marker2D" parent="WeaponPivot/GunWeaponType"]
+position = Vector2(25.2459, -9.43396)
+gizmo_extents = 19.0
