@@ -34,12 +34,12 @@ public partial class PlayerMain : CharacterBody2D
 
     //Will provide the base node with animation in it from the _Ready() function
     //This will also provide flexibility such as changing ground shadow and such.
-    Node2D baseAnimationNode;
+    AnimationPlayer animationHandler;
 
 
     public override void _Ready()
     {
-        baseAnimationNode = GetNode <Node2D>("HappyBoo");
+        animationHandler = GetNode <Node2D>("HappyBoo").GetNode<AnimationPlayer>("AnimationPlayer");
         GetNode<Area2D>("Gun").Position = Position;
         SetProcess(true);
     }
@@ -60,14 +60,20 @@ public partial class PlayerMain : CharacterBody2D
 
     public override void _Process(double delta)
     {
-        AnimatePlayerBody(doAnimate: (Velocity.Length() > 0.0f || Velocity.Length() < 0.0f));
+        if (Velocity.Length() > 0.0f || Velocity.Length() < 0.0f)
+        {
+            AnimatePlayerBody("walk");
+        }
+        else
+        {
+            AnimatePlayerBody("idle");
+        }
+        
     }
 
     public override void _PhysicsProcess(double delta)
     {
         GetInput();
-
-        RoateGun(GunOffset); 
 
         MoveAndSlide();
     }
@@ -81,37 +87,20 @@ public partial class PlayerMain : CharacterBody2D
         return Velocity;
     }
 
-    public void AnimatePlayerBody(bool doAnimate)
+    /// <summary>
+    /// Plays an animation of the player and if queing an animation will make the next animation play after the initial animation is finished. 
+    /// </summary>
+    /// <param name="animation">Animation to be played</param>
+    /// <param name="queueAnimation">Whether an animation is going to be queued or not. By default false</param>
+    /// <param name="queuedAnimation">Animation to be queued. The default animation will play if not specified</param>
+    public void AnimatePlayerBody(string animation, bool queueAnimation = false, string queuedAnimation = "default")
     {
-        //retrieving animation node here from the base node. 
-        if (doAnimate)
+        animationHandler.Play(animation);
+
+        if (queueAnimation)
         {
-            baseAnimationNode.GetNode<AnimationPlayer>("AnimationPlayer").Play("walk");
+            animationHandler.Queue(queuedAnimation);
         }
-        else 
-        {
-            baseAnimationNode.GetNode<AnimationPlayer>("AnimationPlayer").Play("idle");
-        }
-    }
-
-    public void RoateGun(float offset)
-    {
-        Area2D playerWeapon = GetNode<Area2D>("Gun");
-
-        var direction = GlobalPosition.DirectionTo(GetGlobalMousePosition());
-        var distance = GlobalPosition.DistanceTo(GetGlobalMousePosition());
-
-
-        
-        playerWeapon.Position = direction * offset;
-
-        //===WILl POSSIBLY COME BACK TO THIS ROTATION METHOD LATER===
-        //playerWeapon.RotationDegrees = (360 * distance);
-        //playerWeapon.Rotate(RotationDegrees);
-
-        //GD.Print($"rotation {playerWeapon.Rotation}");
-
-
     }
 
     //Thinking of making this for a hostile entity and we will check if they have damage collision

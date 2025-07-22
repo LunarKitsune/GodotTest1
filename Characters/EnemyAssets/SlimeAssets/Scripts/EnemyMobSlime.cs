@@ -47,7 +47,7 @@ public partial class EnemyMobSlime : CharacterBody2D, IMob
             Velocity = direction * 0;
             GetAnimation("idle");
         }
-
+        MoveAndSlide();
     }
 
     public void GetAnimation(string animationName)
