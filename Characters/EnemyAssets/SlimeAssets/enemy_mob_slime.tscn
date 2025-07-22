@@ -11,7 +11,7 @@ height = 100.0
 [node name="EnemyMobSlime" type="CharacterBody2D"]
 script = ExtResource("2_a361n")
 HP = 30
-Speed = 100
+Speed = 200
 MonsterName = "Green Slime"
 HPMax = 30
 Attack = 5

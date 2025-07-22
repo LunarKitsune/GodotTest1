@@ -1,20 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://bq6p6a0hqw3cq"]
+[gd_scene load_steps=4 format=3 uid="uid://bq6p6a0hqw3cq"]
 
 [ext_resource type="Texture2D" uid="uid://cswb5do8rrj7q" path="res://Imported Assets/2d-project-start/pistol/pistol.png" id="1_iadc8"]
+[ext_resource type="Script" uid="uid://d2p48j5ukah1x" path="res://Characters/PlayerAssets/Weapons/PlayerStarterGun.cs" id="1_mvm3k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6oekb"]
-radius = 469.835
+radius = 515.097
 
 [node name="Gun" type="Area2D"]
+script = ExtResource("1_mvm3k")
+FireRate = 1.0
+AmmoCount = 10
+MaxAmmoCount = 10
+GunPositionOffset = 50.0
 
 [node name="GunRangeCollision" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0)
+position = Vector2(142, 0)
 shape = SubResource("CircleShape2D_6oekb")
 
 [node name="WeaponPivot" type="Marker2D" parent="."]
+position = Vector2(-1, 0)
+gizmo_extents = 50.0
 
 [node name="GunWeaponType" type="Sprite2D" parent="WeaponPivot"]
-position = Vector2(1, -1)
+position = Vector2(150, -1)
 scale = Vector2(0.871428, 1.06)
 texture = ExtResource("1_iadc8")
 
