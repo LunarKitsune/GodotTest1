@@ -88,7 +88,7 @@
               "RelativeDocumentMoniker": "Characters\\PlayerAssets\\Weapons\\PlayerStarterGun.cs",
               "ToolTip": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Characters\\PlayerAssets\\Weapons\\PlayerStarterGun.cs",
               "RelativeToolTip": "Characters\\PlayerAssets\\Weapons\\PlayerStarterGun.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAmwB4AAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAIwDYAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-22T00:15:24.134Z",
               "EditorCaption": ""
@@ -103,8 +103,7 @@
               "RelativeToolTip": "Bullet.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAqwBwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T02:09:12.186Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T02:09:12.186Z"
             },
             {
               "$type": "Document",
@@ -116,8 +115,7 @@
               "RelativeToolTip": "Characters\\EnemyAssets\\SlimeAssets\\Scripts\\EnemyMobSlime.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAkwD0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T15:04:51.366Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-19T15:04:51.366Z"
             },
             {
               "$type": "Document",
