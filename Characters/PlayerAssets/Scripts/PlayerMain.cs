@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class PlayerMain : CharacterBody2D
+public partial class PlayerMain : CharacterBody2D,IDamagable
 {
     //these are player properties. These are what defines some of the players attributes
     //think of what attributes you have on your own. 
@@ -106,9 +106,13 @@ public partial class PlayerMain : CharacterBody2D
     //Thinking of making this for a hostile entity and we will check if they have damage collision
     //if they do then we will determine what the enemy strength is (provided there is one) and
     //deduct from the player's health. 
-    void HurtPlayer(CharacterBody2D hostileEntity)
+    public void TakeDamage(int damageTaken)
     {
-
+        PlayerHitPoints -= damageTaken;
+        if (PlayerHitPoints < 0)
+        {
+            QueueFree();
+        }
     }
 
 
@@ -124,6 +128,7 @@ public partial class PlayerMain : CharacterBody2D
 
     public void GetTreeAndTypes()
     {
+
     }
 
     #endregion

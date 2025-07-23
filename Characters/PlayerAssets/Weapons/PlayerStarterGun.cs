@@ -6,7 +6,7 @@ public partial class PlayerStarterGun : Area2D
     [Export]
     float FireRate {  get; set; }
     [Export]
-    Bullet BulletType { get; set; }
+    PackedScene BulletType { get; set; }
     [Export]
     int AmmoCount {  get; set; }
     [Export]
@@ -28,6 +28,7 @@ public partial class PlayerStarterGun : Area2D
 
         RotateAroundPlayer(GunPositionOffset, mousePos);
         PointGun(mousePos);
+        FireBullet();
     }
 
     public void RotateAroundPlayer(float offset, Vector2 mousePosition)
@@ -41,8 +42,12 @@ public partial class PlayerStarterGun : Area2D
         LookAt(GetGlobalMousePosition());
     }
 
-    public void FireFun()
+    public void FireBullet()
     {
-
+        if(Input.IsActionJustPressed("Fire"))
+        {
+            
+        }
+            
     }
 }

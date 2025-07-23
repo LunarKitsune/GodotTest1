@@ -3,7 +3,7 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 
-public partial class EnemyMobSlime : CharacterBody2D, IMob
+public partial class EnemyMobSlime : CharacterBody2D, IMob, IDamagable
 {
     public CharacterBody2D PlayerPosition { get; set; }
 
@@ -55,7 +55,13 @@ public partial class EnemyMobSlime : CharacterBody2D, IMob
         GetNode<AnimationPlayer>("Slime/EntityAnimationPlayer").Play(animationName);
         
     }
-   
 
-
+    public void TakeDamage(int damageTaken)
+    {
+        HP -= damageTaken;
+        if(HP < 0)
+        {
+            QueueFree();
+        }
+    }
 }
