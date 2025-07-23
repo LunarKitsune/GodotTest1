@@ -1,22 +1,12 @@
 using Godot;
 using System;
 
-/*
- * Notes:
- * 
- * Need to have the bullet that will eventually be fired inherit the rotation
- * of the gun so it fires in the proper direction.
- * 
- * Bullet will need to collide with mobs and make mobs take damage. 
- */
-
-
 public partial class PlayerStarterGun : Area2D
 {
     [Export]
     float FireRate {  get; set; }
     [Export]
-    Bullet BulletType { get; set; }
+    PackedScene BulletType { get; set; }
     [Export]
     int AmmoCount {  get; set; }
     [Export]
@@ -34,25 +24,30 @@ public partial class PlayerStarterGun : Area2D
     {
         //should both point and rotate the gun mouse. 
         //will have to figure out how to get gun not to follow mouse inside the gun offset from player
-        Vector2 mouseDirection = GlobalPosition.DirectionTo(GetGlobalMousePosition());
+        Vector2 mousePos = GlobalPosition.DirectionTo(GetGlobalMousePosition());
 
-        RotateAroundPlayer(GunPositionOffset, mouseDirection);
-        PointGun(mouseDirection);
+        RotateAroundPlayer(GunPositionOffset, mousePos);
+        PointGun(mousePos);
+        FireBullet();
     }
 
-    public void RotateAroundPlayer(float offset, Vector2 mouseDir)
+    public void RotateAroundPlayer(float offset, Vector2 mousePosition)
     {
-        Position = mouseDir * offset;
+        Position = GlobalPosition.DirectionTo(GetGlobalMousePosition()) * offset;
 
     }
 
-    public void PointGun(Vector2 mouseDir)
+    public void PointGun(Vector2 mousePosition)
     {
         LookAt(GetGlobalMousePosition());
     }
 
-    public void FireFun()
+    public void FireBullet()
     {
-
+        if(Input.IsActionJustPressed("Fire"))
+        {
+            
+        }
+            
     }
 }

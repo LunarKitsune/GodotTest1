@@ -41,3 +41,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Gun" parent="." instance=ExtResource("4_0g85c")]
 position = Vector2(61, -27)
+
+[node name="InvincibilityTimer" type="Timer" parent="."]
+wait_time = 2.0
