@@ -1,41 +1,41 @@
 using Godot;
 using System;
 
-public partial class Bullet : Area2D
+public partial class Bullet : Area2D,IProjectile
 {
     [Export]
-    float BulletSpeed { get; set; } 
+    public float ProjectileSpeed { get; set; }
     [Export]
-    int BulletDamage {  get; set; }
+    public int ProjectileDamage { get; set; }
     [Export]
-    Vector2 BulletRange {  get; set; }
+    public Vector2 ProjectileRange { get; set; }
     [Export]
-    bool isPiercing {  get; set; }
+    public bool isProjectilePiercing { get; set; }
 
     Marker2D rotationReference;
 
     public override void _Ready()
     {
         rotationReference = GetNode<Area2D>("Gun").GetNode<Marker2D>("WeaponPivot");
-        BulletRange = Position * 1500;
+        ProjectileRange = Position * 1500;
     }
 
     public override void _PhysicsProcess(double delta)
     {
-        RotateBullet(delta);
+        PushBullet(delta);
 
-        if (BulletRange < Position)
+        if (ProjectileRange < Position)
         {
             DestroyBullet();
         }
 
     }
 
-    public void RotateBullet(double deltaRef)
+    public void PushBullet(double deltaRef)
     {
         Vector2 direction = Vector2.Right.Rotated(rotationReference.Rotation);
 
-        Position += direction * BulletSpeed * (float)deltaRef;
+        Position += direction * ProjectileSpeed * (float)deltaRef;
     }
 
     public void DestroyBullet()
@@ -50,10 +50,11 @@ public partial class Bullet : Area2D
     {
         if(body is IDamagable damagable)
         {
-            damagable.TakeDamage(BulletDamage);
+            damagable.TakeDamage(ProjectileDamage);
         }
 
-        DestroyBullet();
+        if(!isProjectilePiercing)
+        { DestroyBullet(); }
     }
 
     #endregion EventHandlers
