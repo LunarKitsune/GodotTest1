@@ -19,19 +19,18 @@ public partial class PlayerStarterGun : Area2D
     //"WeaponPivot/GunWeaponType/ShootingPoint"
     public override void _Ready()
     {
-        shootPointref = GetNode<Node2D>("WeaponPivot/Pistol/ShootingPoint");
-        shootPointref.TopLevel = true;
         
     }
 
     public override void _PhysicsProcess(double delta)
     {
+        shootPointref = GetNode<Node2D>("WeaponPivot/Pistol/ShootingPoint");
         //should both point and rotate the gun mouse. 
         //will have to figure out how to get gun not to follow mouse inside the gun offset from player
         Vector2 mousePos = GetGlobalMousePosition();
 
         PointGun(mousePos);
-        FireBullet();
+        FireBullet(shootPointref);
     }
 
     public void PointGun(Vector2 mousePosition)
@@ -40,7 +39,7 @@ public partial class PlayerStarterGun : Area2D
         LookAt(mousePosition);
     }
 
-    public void FireBullet()
+    public void FireBullet(Node2D spawnPointRef)
     {
         if(Input.IsActionJustPressed("Fire"))
         {
@@ -49,10 +48,9 @@ public partial class PlayerStarterGun : Area2D
             //it would otherwise just spawn relative to the spawning point made
             
             Bullet gunBullet = (Bullet)BulletType.Instantiate();
-            gunBullet.Transform = shootPointref.GlobalTransform;
+            gunBullet.GlobalRotation = shootPointref.GlobalRotation;
+            gunBullet.GlobalPosition = shootPointref.GlobalPosition;
 
-
-            GD.Print($"Shooting Point g. rotation: {shootPointref.Transform}");
 
             shootPointref.AddChild(gunBullet);
 
