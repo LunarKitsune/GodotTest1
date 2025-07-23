@@ -1,6 +1,9 @@
 using Godot;
 using System;
 
+
+
+
 public partial class PlayerStarterGun : Area2D
 {
     [Export]
@@ -14,10 +17,13 @@ public partial class PlayerStarterGun : Area2D
     [Export]
     float GunPositionOffset { get; set; }
 
+    Marker2D shootingPoint;
 
+    //"WeaponPivot/GunWeaponType/ShootingPoint"
     public override void _Ready()
     {
-        
+        shootingPoint = GetNode<Marker2D>("WeaponPivot/GunWeaponType/ShootingPoint");
+        GD.Print($"shooting point position: {shootingPoint.GlobalPosition}");
     }
 
     public override void _PhysicsProcess(double delta)
@@ -33,7 +39,7 @@ public partial class PlayerStarterGun : Area2D
 
     public void RotateAroundPlayer(float offset, Vector2 mousePosition)
     {
-        Position = GlobalPosition.DirectionTo(GetGlobalMousePosition()) * offset;
+        Position = mousePosition * offset;
 
     }
 
@@ -46,6 +52,13 @@ public partial class PlayerStarterGun : Area2D
     {
         if(Input.IsActionJustPressed("Fire"))
         {
+            //need to figure out how to pull the global position of the bullet being instantiated in c#
+            //fires seperately from the gun, but now just needs the rotation and position of gun bullet spawner
+            Bullet gunBullet = (Bullet)BulletType.Instantiate();
+            gunBullet.Rotation = shootingPoint.GlobalRotation;
+            gunBullet.Position = Position;
+            GetParent().AddChild(gunBullet);
+            
             
         }
             

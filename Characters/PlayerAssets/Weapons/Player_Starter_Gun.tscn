@@ -13,9 +13,9 @@ FireRate = 1.0
 BulletType = ExtResource("2_xl242")
 AmmoCount = 10
 MaxAmmoCount = 10
-GunPositionOffset = 50.0
 
 [node name="GunRangeCollision" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(142, 0)
 shape = SubResource("CircleShape2D_6oekb")
 
@@ -29,5 +29,4 @@ scale = Vector2(0.871428, 1.06)
 texture = ExtResource("1_iadc8")
 
 [node name="ShootingPoint" type="Marker2D" parent="WeaponPivot/GunWeaponType"]
-position = Vector2(25.2459, -9.43396)
-gizmo_extents = 19.0
+position = Vector2(24.0984, -10.3774)
