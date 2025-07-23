@@ -10,7 +10,6 @@ radius = 57.0088
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_3nbi7")
-GunOffset = 150.0
 
 [node name="HappyBoo" parent="." instance=ExtResource("2_eylbf")]
 position = Vector2(1, -1)
