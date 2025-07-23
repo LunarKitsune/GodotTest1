@@ -9,8 +9,10 @@ height = 29.997
 
 [node name="Bullet" type="Area2D"]
 collision_layer = 0
-collision_mask = 3
+collision_mask = 2
 script = ExtResource("1_uuu3r")
+ProjectileSpeed = 175.0
+ProjectileDamage = 10
 
 [node name="Projectile" type="Sprite2D" parent="."]
 position = Vector2(-11, -1)

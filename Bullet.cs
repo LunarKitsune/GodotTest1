@@ -12,30 +12,21 @@ public partial class Bullet : Area2D,IProjectile
     [Export]
     public bool isProjectilePiercing { get; set; }
 
-    Marker2D rotationReference;
-
     public override void _Ready()
     {
-        rotationReference = GetNode<Area2D>("Gun").GetNode<Marker2D>("WeaponPivot");
-        ProjectileRange = Position * 1500;
+
     }
 
     public override void _PhysicsProcess(double delta)
     {
         PushBullet(delta);
 
-        if (ProjectileRange < Position)
-        {
-            DestroyBullet();
-        }
-
     }
 
     public void PushBullet(double deltaRef)
     {
-        Vector2 direction = Vector2.Right.Rotated(rotationReference.Rotation);
-
-        Position += direction * ProjectileSpeed * (float)deltaRef;
+        Vector2 direction = Vector2.Right.Rotated(Rotation);
+        Position += ProjectileSpeed * direction * (float)deltaRef;
     }
 
     public void DestroyBullet()
@@ -48,13 +39,15 @@ public partial class Bullet : Area2D,IProjectile
     
     public void OnBodyEntered(Node2D body)
     {
-        if(body is IDamagable damagable)
+        if(body is IDamagable damagable && body is IMob mob)
         {
             damagable.TakeDamage(ProjectileDamage);
         }
 
         if(!isProjectilePiercing)
-        { DestroyBullet(); }
+        { 
+            DestroyBullet(); 
+        }
     }
 
     #endregion EventHandlers

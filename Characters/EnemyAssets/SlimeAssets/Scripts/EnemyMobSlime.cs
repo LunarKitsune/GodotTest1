@@ -31,6 +31,8 @@ public partial class EnemyMobSlime : CharacterBody2D, IMob, IDamagable
         PathfindToPlayer();
     }
 
+    //a dumb pathfind where the slim always assumes it can just go straight to the player
+    //may try to make this smarter
     public void PathfindToPlayer()
     {
         var direction = GlobalPosition.DirectionTo(PlayerPosition.GlobalPosition);
@@ -59,7 +61,8 @@ public partial class EnemyMobSlime : CharacterBody2D, IMob, IDamagable
     public void TakeDamage(int damageTaken)
     {
         HP -= damageTaken;
-        if(HP < 0)
+
+        if(HP <= 0)
         {
             QueueFree();
         }
