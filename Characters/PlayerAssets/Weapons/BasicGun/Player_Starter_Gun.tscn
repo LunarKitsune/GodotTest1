@@ -1,15 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://bq6p6a0hqw3cq"]
 
-[ext_resource type="Texture2D" uid="uid://cswb5do8rrj7q" path="res://Imported Assets/2d-project-start/pistol/pistol.png" id="1_iadc8"]
-[ext_resource type="Script" uid="uid://d2p48j5ukah1x" path="res://Characters/PlayerAssets/Weapons/PlayerStarterGun.cs" id="1_mvm3k"]
-[ext_resource type="PackedScene" uid="uid://jyubbyv8l8fw" path="res://Characters/PlayerAssets/Weapons/BulletTypes/BasicBullet.tscn" id="2_xl242"]
+[ext_resource type="Script" uid="uid://d2p48j5ukah1x" path="res://Characters/PlayerAssets/Weapons/BasicGun/PlayerStarterGun.cs" id="1_b220p"]
+[ext_resource type="PackedScene" uid="uid://jyubbyv8l8fw" path="res://Characters/PlayerAssets/Weapons/BulletTypes/Basic Bullet/BasicBullet.tscn" id="2_fatkb"]
+[ext_resource type="Texture2D" uid="uid://cswb5do8rrj7q" path="res://Imported Assets/2d-project-start/pistol/pistol.png" id="3_pn7yb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ngh7p"]
 radius = 411.247
 
 [node name="Gun" type="Area2D"]
-script = ExtResource("1_mvm3k")
-BulletType = ExtResource("2_xl242")
+script = ExtResource("1_b220p")
+BulletType = ExtResource("2_fatkb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -21,7 +21,7 @@ position = Vector2(126, 0)
 
 [node name="Pistol" type="Sprite2D" parent="WeaponPivot"]
 position = Vector2(15, -2)
-texture = ExtResource("1_iadc8")
+texture = ExtResource("3_pn7yb")
 
 [node name="ShootingPoint" type="Node2D" parent="WeaponPivot/Pistol"]
 position = Vector2(25.0131, -8.83206)
