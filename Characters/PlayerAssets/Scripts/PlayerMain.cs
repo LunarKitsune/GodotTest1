@@ -12,6 +12,9 @@ public partial class PlayerMain : CharacterBody2D,IDamagable
      *   -You can interact with your enviornemnt
      *   -You can get hurt and lose life force (for real life its blood, for characters its endurance/hp representing
      *   what stress they can endure before they passout/croak
+     *   
+     *   
+     *   Player will need push back from slimes when collided with. Also will need to take damage as well
     */
 
 
@@ -29,9 +32,6 @@ public partial class PlayerMain : CharacterBody2D,IDamagable
     bool isInvincible { get; set; }
     #endregion PlayerMain Properties
 
-    [Export]
-    float GunOffset { get; set; } = 50;
-
     //Will provide the base node with animation in it from the _Ready() function
     //This will also provide flexibility such as changing ground shadow and such.
     AnimationPlayer animationHandler;
@@ -40,7 +40,6 @@ public partial class PlayerMain : CharacterBody2D,IDamagable
     public override void _Ready()
     {
         animationHandler = GetNode <Node2D>("HappyBoo").GetNode<AnimationPlayer>("AnimationPlayer");
-        GetNode<Area2D>("Gun").Position = Position;
         SetProcess(true);
     }
 
