@@ -1,9 +1,6 @@
 using Godot;
 using System;
 
-
-
-
 public partial class PlayerStarterGun : Area2D
 {
     [Export]
@@ -17,49 +14,49 @@ public partial class PlayerStarterGun : Area2D
     [Export]
     float GunPositionOffset { get; set; }
 
-    Marker2D shootingPoint;
+    Node2D shootPointref;
 
     //"WeaponPivot/GunWeaponType/ShootingPoint"
     public override void _Ready()
     {
-        shootingPoint = GetNode<Marker2D>("WeaponPivot/GunWeaponType/ShootingPoint");
-        GD.Print($"shooting point position: {shootingPoint.GlobalPosition}");
+        shootPointref = GetNode<Node2D>("WeaponPivot/Pistol/ShootingPoint");
+        shootPointref.TopLevel = true;
+        
     }
 
     public override void _PhysicsProcess(double delta)
     {
         //should both point and rotate the gun mouse. 
         //will have to figure out how to get gun not to follow mouse inside the gun offset from player
-        Vector2 mousePos = GlobalPosition.DirectionTo(GetGlobalMousePosition());
+        Vector2 mousePos = GetGlobalMousePosition();
 
-        RotateAroundPlayer(GunPositionOffset, mousePos);
         PointGun(mousePos);
         FireBullet();
     }
 
-    public void RotateAroundPlayer(float offset, Vector2 mousePosition)
-    {
-        Position = mousePosition * offset;
-
-    }
-
     public void PointGun(Vector2 mousePosition)
     {
-        LookAt(GetGlobalMousePosition());
+        
+        LookAt(mousePosition);
     }
 
     public void FireBullet()
     {
         if(Input.IsActionJustPressed("Fire"))
         {
-            //need to figure out how to pull the global position of the bullet being instantiated in c#
-            //fires seperately from the gun, but now just needs the rotation and position of gun bullet spawner
+            //solved bullet spawning issue by selecting "top leve" in inspector for bullet's visbility tab.
+            //top level allows the bullet to act independently despite being a child of node shooting point. 
+            //it would otherwise just spawn relative to the spawning point made
+            
             Bullet gunBullet = (Bullet)BulletType.Instantiate();
-            gunBullet.Rotation = shootingPoint.GlobalRotation;
-            gunBullet.Position = Position;
-            GetParent().AddChild(gunBullet);
-            
-            
+            gunBullet.Transform = shootPointref.GlobalTransform;
+
+
+            GD.Print($"Shooting Point g. rotation: {shootPointref.Transform}");
+
+            shootPointref.AddChild(gunBullet);
+
+
         }
             
     }
