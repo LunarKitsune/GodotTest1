@@ -4,29 +4,27 @@
 [ext_resource type="Script" uid="uid://d2p48j5ukah1x" path="res://Characters/PlayerAssets/Weapons/PlayerStarterGun.cs" id="1_mvm3k"]
 [ext_resource type="PackedScene" uid="uid://jyubbyv8l8fw" path="res://Characters/PlayerAssets/Weapons/BulletTypes/BasicBullet.tscn" id="2_xl242"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_6oekb"]
-radius = 515.097
+[sub_resource type="CircleShape2D" id="CircleShape2D_ngh7p"]
+radius = 411.247
 
 [node name="Gun" type="Area2D"]
 script = ExtResource("1_mvm3k")
-FireRate = 1.0
 BulletType = ExtResource("2_xl242")
-AmmoCount = 10
-MaxAmmoCount = 10
 
-[node name="GunRangeCollision" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(142, 0)
-shape = SubResource("CircleShape2D_6oekb")
+position = Vector2(138, 0.139604)
+shape = SubResource("CircleShape2D_ngh7p")
 
 [node name="WeaponPivot" type="Marker2D" parent="."]
-position = Vector2(-1, 0)
-gizmo_extents = 50.0
+position = Vector2(126, 0)
 
-[node name="GunWeaponType" type="Sprite2D" parent="WeaponPivot"]
-position = Vector2(150, -1)
-scale = Vector2(0.871428, 1.06)
+[node name="Pistol" type="Sprite2D" parent="WeaponPivot"]
+position = Vector2(15, -2)
 texture = ExtResource("1_iadc8")
 
-[node name="ShootingPoint" type="Marker2D" parent="WeaponPivot/GunWeaponType"]
-position = Vector2(24.0984, -10.3774)
+[node name="ShootingPoint" type="Node2D" parent="WeaponPivot/Pistol"]
+position = Vector2(25.0131, -8.83206)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5

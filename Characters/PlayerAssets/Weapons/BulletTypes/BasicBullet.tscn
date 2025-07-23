@@ -8,6 +8,7 @@ radius = 9.01319
 height = 29.997
 
 [node name="Bullet" type="Area2D"]
+top_level = true
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_uuu3r")

@@ -26,6 +26,7 @@ public partial class Bullet : Area2D,IProjectile
     public void PushBullet(double deltaRef)
     {
         Vector2 direction = Vector2.Right.Rotated(Rotation);
+        
         Position += ProjectileSpeed * direction * (float)deltaRef;
     }
 
