@@ -5,14 +5,15 @@
 [ext_resource type="Texture2D" uid="uid://cswb5do8rrj7q" path="res://Imported Assets/2d-project-start/pistol/pistol.png" id="3_pn7yb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ngh7p"]
-radius = 411.247
+radius = 282.649
 
 [node name="Gun" type="Area2D"]
+collision_layer = 0
+collision_mask = 3
 script = ExtResource("1_b220p")
 BulletType = ExtResource("2_fatkb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(138, 0.139604)
 shape = SubResource("CircleShape2D_ngh7p")
 
@@ -28,3 +29,5 @@ position = Vector2(25.0131, -8.83206)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.5
+
+[connection signal="area_exited" from="." to="." method="OnGunRangeExited"]
