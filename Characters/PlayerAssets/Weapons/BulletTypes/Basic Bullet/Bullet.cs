@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Bullet : Area2D,IProjectile, IPlayerSpawned
+public partial class Bullet : Area2D,IProjectile
 {
     [Export]
     public float ProjectileSpeed { get; set; }

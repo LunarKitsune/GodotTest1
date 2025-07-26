@@ -1,7 +1,8 @@
 using Godot;
 using System;
+using Test1.InterfaceScripts;
 
-public partial class PlayerMain : CharacterBody2D,IDamagable
+public partial class PlayerMain : CharacterBody2D, IDamagable, IPlayable
 {
     //these are player properties. These are what defines some of the players attributes
     //think of what attributes you have on your own. 
@@ -20,16 +21,24 @@ public partial class PlayerMain : CharacterBody2D,IDamagable
 
     #region PlayerMain Properties
     [Export]
-    int Speed { get; set; } = 600;
+    public int Speed { get; set; } = 600;
 
     [Export]
-    string PlayerName { get; set; }
+    public string PlayerName { get; set; }
 
     [Export]
-    int PlayerHitPoints { get; set; } = 30;
+    public int PlayerHitPoints { get; set; } = 30;
+    [Export]
+    public int PlayerMaxHitPoints { get; set; } = 30;
 
     [Export]
-    bool isInvincible { get; set; }
+    public bool isInvincible { get; set; }
+
+    //for switching character types and abilities. Should honestly probably split this and have
+    //a inherit structure for player type to make characters changable. 
+    [Export]
+    public PackedScene PlayerCharacterType { get; set; }
+
     #endregion PlayerMain Properties
 
     //Will provide the base node with animation in it from the _Ready() function
@@ -40,6 +49,7 @@ public partial class PlayerMain : CharacterBody2D,IDamagable
     public override void _Ready()
     {
         animationHandler = GetNode <Node2D>("HappyBoo").GetNode<AnimationPlayer>("AnimationPlayer");
+        GetNode<Label>("HPLabel").Text = PlayerHitPoints.ToString();
         SetProcess(true);
     }
 
@@ -108,28 +118,37 @@ public partial class PlayerMain : CharacterBody2D,IDamagable
     public void TakeDamage(int damageTaken)
     {
         PlayerHitPoints -= damageTaken;
-        if (PlayerHitPoints < 0)
+
+        GetNode<Label>("HPLabel").Text = PlayerHitPoints.ToString();  
+        if (PlayerHitPoints <= 0)
         {
             QueueFree();
+
+            //have game over thing here. or maybe the main game can detect if the player exists in reference?
         }
     }
 
 
     #endregion Custom Player Functions
 
-    #region signal delegates
-    //[Signal]
-    public delegate void PlayerCollisionHurtHandler();
 
-    #endregion signal delegates
+    #region Signal Delegates
 
-    #region DevFunctions
+    #endregion Signal Delegates
 
-    public void GetTreeAndTypes()
+
+    #region Event Handlers
+
+    public void OnEnemyCollision(Node2D body)
     {
-
+        if (body is IMob monster)
+        {
+            TakeDamage(monster.Attack);
+            
+            GD.Print("enterd hurtbox");
+        }
     }
 
-    #endregion
+    #endregion Event Handlers
 
 }
