@@ -12,5 +12,7 @@ public interface IMob
     public int Attack { get; set; }
 
     public int Defense { get; set; }
+
+    public ProgressBar HPProgress { get; set; }
 }
 
