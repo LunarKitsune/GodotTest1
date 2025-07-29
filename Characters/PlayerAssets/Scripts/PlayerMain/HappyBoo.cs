@@ -1,8 +1,9 @@
 using Godot;
 using System;
+using Test1.Characters.PlayerAssets.Scripts.PlayerMain;
 using Test1.InterfaceScripts;
 
-public partial class PlayerMain : CharacterBody2D, IDamagable, IPlayable
+public partial class HappyBoo : PlayerBase
 {
     //these are player properties. These are what defines some of the players attributes
     //think of what attributes you have on your own. 
@@ -19,53 +20,33 @@ public partial class PlayerMain : CharacterBody2D, IDamagable, IPlayable
     */
 
 
-    #region PlayerMain Properties
-    [Export]
-    public int Speed { get; set; } = 600;
-
-    [Export]
-    public string PlayerName { get; set; }
-
-    [Export]
-    public int PlayerHitPoints { get; set; } = 30;
-    [Export]
-    public int PlayerMaxHitPoints { get; set; } = 30;
-
-    [Export]
-    public bool isInvincible { get; set; }
-
-    //for switching character types and abilities. Should honestly probably split this and have
-    //a inherit structure for player type to make characters changable. 
-    [Export]
-    public PackedScene PlayerCharacterType { get; set; }
-
-    #endregion PlayerMain Properties
-
-    //Will provide the base node with animation in it from the _Ready() function
-    //This will also provide flexibility such as changing ground shadow and such.
-    AnimationPlayer animationHandler;
-
-
     public override void _Ready()
     {
-        animationHandler = GetNode <Node2D>("HappyBoo").GetNode<AnimationPlayer>("AnimationPlayer");
+        PlayerHitPoints = 30;
+        Speed = 400;
+        IsInvincible = false;
+        PlayerMaxHitPoints = 50;
+        PlayerName = "bob";
+
+        animationHandler = GetNode<Node2D>("HappyBoo").GetNode<AnimationPlayer>("AnimationPlayer");
         GetNode<Label>("HPLabel").Text = PlayerHitPoints.ToString();
         SetProcess(true);
     }
 
-    //These are functions. Functions commonly have thse base characteristics:
+    ////These are functions. Functions commonly have thse base characteristics:
 
-    /*
-     * [Access modifier]  [Return type (can be void if returning nothing)]  [Name]      [Arguments] examnple (int a, string b...ect)
-     * 
-     * So a function could simply be public int CalculateSum (int input1, int input2){}
-     * 
-     * Functions also consist of a code body that comes in brackets so say in CalculateSum()
-     * 
-     * {
-     *      Return input 1 + input 2;
-     * }
-    */
+    ///*
+    // * [Access modifier]  [Return type (can be void if returning nothing)]  [Name]      [Arguments] examnple (int a, string b...ect)
+    // * 
+    // * So a function could simply be public int CalculateSum (int input1, int input2){}
+    // * 
+    // * Functions also consist of a code body that comes in brackets so say in CalculateSum()
+    // * 
+    // * {
+    // *      Return input 1 + input 2;
+    // * }
+    //*/
+
 
     public override void _Process(double delta)
     {
@@ -77,7 +58,7 @@ public partial class PlayerMain : CharacterBody2D, IDamagable, IPlayable
         {
             AnimatePlayerBody("idle");
         }
-        
+
     }
 
     public override void _PhysicsProcess(double delta)
@@ -88,7 +69,7 @@ public partial class PlayerMain : CharacterBody2D, IDamagable, IPlayable
     }
 
     #region Custom Player Functions
-    public Vector2 GetInput()
+    public virtual Vector2 GetInput()
     {
         Vector2 inputDirection = Input.GetVector("GD_Left", "GD_Right", "GD_Up", "GD_Down");
         Velocity = inputDirection * Speed;
@@ -119,7 +100,7 @@ public partial class PlayerMain : CharacterBody2D, IDamagable, IPlayable
     {
         PlayerHitPoints -= damageTaken;
 
-        GetNode<Label>("HPLabel").Text = PlayerHitPoints.ToString();  
+        GetNode<Label>("HPLabel").Text = PlayerHitPoints.ToString();
         if (PlayerHitPoints <= 0)
         {
             QueueFree();
@@ -137,18 +118,22 @@ public partial class PlayerMain : CharacterBody2D, IDamagable, IPlayable
     #endregion Signal Delegates
 
 
-    #region Event Handlers
+    #region Event Functions
 
     public void OnEnemyCollision(Node2D body)
     {
         if (body is IMob monster)
         {
             TakeDamage(monster.Attack);
-            
-            GD.Print("enterd hurtbox");
+            GD.Print("collision detection successful");
         }
     }
 
-    #endregion Event Handlers
+    public void OnGunPickUp()
+    {
+
+    }
+
+    #endregion Event Functions
 
 }

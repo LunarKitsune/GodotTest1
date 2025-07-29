@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://lunnqwq1slsg"]
 
-[ext_resource type="PackedScene" uid="uid://c20l2e8rbue3o" path="res://Characters/PlayerAssets/Player_Main.tscn" id="1_akvua"]
+[ext_resource type="PackedScene" uid="uid://c20l2e8rbue3o" path="res://Characters/HappyBoo.tscn" id="1_akvua"]
 [ext_resource type="PackedScene" uid="uid://bp2epwompibjk" path="res://Characters/EnemyAssets/SlimeAssets/enemy_mob_slime.tscn" id="2_xre04"]
 
 [node name="DebugScene" type="Node2D"]

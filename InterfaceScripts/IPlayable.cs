@@ -12,7 +12,7 @@ namespace Test1.InterfaceScripts
         string PlayerName { get; set; }
         int PlayerHitPoints { get; set; }
         int PlayerMaxHitPoints { get; set; }
-        PackedScene PlayerCharacterType { get; set; }
+        bool IsInvincible { get; set; }
 
 
     }

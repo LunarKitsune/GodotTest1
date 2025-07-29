@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://c20l2e8rbue3o"]
 
-[ext_resource type="Script" uid="uid://bdfbuxwtdq2ui" path="res://Characters/PlayerAssets/Scripts/PlayerMain.cs" id="1_3nbi7"]
+[ext_resource type="Script" uid="uid://e5d4kaewbp53" path="res://Characters/PlayerAssets/Scripts/PlayerMain/HappyBoo.cs" id="1_i8duc"]
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://Imported Assets/2d-project-start/characters/happy_boo/happy_boo.tscn" id="2_eylbf"]
 [ext_resource type="Script" uid="uid://bdgoybruhh0q3" path="res://Characters/PlayerAssets/Scripts/PlayerLabel.cs" id="3_ie0vr"]
 [ext_resource type="PackedScene" uid="uid://bq6p6a0hqw3cq" path="res://Characters/PlayerAssets/Weapons/BasicGun/Player_Starter_Gun.tscn" id="4_0g85c"]
@@ -9,14 +9,15 @@
 radius = 51.0098
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0g85c"]
-radius = 56.0357
+radius = 57.0088
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 3
-script = ExtResource("1_3nbi7")
+script = ExtResource("1_i8duc")
 
 [node name="HappyBoo" parent="." instance=ExtResource("2_eylbf")]
 position = Vector2(1, -1)
+script = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, -42)
@@ -47,8 +48,7 @@ zoom = Vector2(0.75, 0.75)
 [node name="InvincibilityTimer" type="Timer" parent="."]
 wait_time = 2.0
 
-[node name="Gun" parent="." instance=ExtResource("4_0g85c")]
-position = Vector2(-1, -19)
+[node name="PlayerStarterGun" parent="." instance=ExtResource("4_0g85c")]
 
 [node name="PainArea" type="Area2D" parent="."]
 collision_mask = 3

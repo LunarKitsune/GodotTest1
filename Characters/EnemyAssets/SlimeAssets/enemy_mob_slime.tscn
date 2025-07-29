@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bp2epwompibjk"]
 
+[ext_resource type="Script" uid="uid://3nsynwvv0pww" path="res://Characters/EnemyAssets/SlimeAssets/Scripts/GreenSlime/GreenSlime.cs" id="1_0hemc"]
 [ext_resource type="PackedScene" uid="uid://ogik4s70pgwl" path="res://Imported Assets/2d-project-start/characters/slime/slime.tscn" id="1_k3fw2"]
-[ext_resource type="Script" uid="uid://miyulrx4v7kb" path="res://Characters/EnemyAssets/SlimeAssets/Scripts/EnemyMobSlime.cs" id="2_a361n"]
 [ext_resource type="Script" uid="uid://ptdwww4ot5e3" path="res://Characters/EnemyAssets/SlimeAssets/Scripts/SlimeAnimation.cs" id="3_50hjk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_73bb0"]
@@ -11,13 +11,7 @@ height = 100.0
 [node name="EnemyMobSlime" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 3
-script = ExtResource("2_a361n")
-HP = 30
-Speed = 200
-MonsterName = "Green Slime"
-HPMax = 30
-Attack = 1
-Defense = 1
+script = ExtResource("1_0hemc")
 
 [node name="Slime" parent="." instance=ExtResource("1_k3fw2")]
 script = ExtResource("3_50hjk")
