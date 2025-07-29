@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dwphf4ol5xgfv"]
 
 [ext_resource type="Script" uid="uid://di1wmuhucwqjt" path="res://SurvivorExampleGame.cs" id="1_6oolj"]
-[ext_resource type="PackedScene" uid="uid://c20l2e8rbue3o" path="res://Characters/PlayerAssets/Player_Main.tscn" id="1_wlncp"]
+[ext_resource type="PackedScene" uid="uid://c20l2e8rbue3o" path="res://Characters/HappyBoo.tscn" id="1_wlncp"]
 [ext_resource type="PackedScene" uid="uid://7py8taphh6qq" path="res://EnviornmentAssets/PineTree.tscn" id="2_utf8y"]
 [ext_resource type="PackedScene" uid="uid://bp2epwompibjk" path="res://Characters/EnemyAssets/SlimeAssets/enemy_mob_slime.tscn" id="3_f8rkf"]
 

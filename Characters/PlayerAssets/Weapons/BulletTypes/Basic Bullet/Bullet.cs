@@ -51,6 +51,14 @@ public partial class Bullet : Area2D,IProjectile
         }
     }
 
+    public void OnBulletRangeExit(Area2D body)
+    {
+        if (body is IFirable)
+        {
+            DestroyBullet();
+        }
+    }
+
     #endregion EventHandlers
 
 }

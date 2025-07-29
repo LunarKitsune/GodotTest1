@@ -10,13 +10,51 @@ namespace Test1.Characters.PlayerAssets.Scripts.PlayerMain
 {
     public partial class PlayerBase : CharacterBody2D, IPlayable
     {
+        #region PlayerMain Properties
+        [Export]
+        public int Speed { get; set; }
+
+        [Export]
         public string PlayerName { get; set; }
-        public PackedScene PlayerCharacterType { get; set; }
 
-        public Vector2 GetInput()
-        {
-            throw new NotImplementedException();
-        }
+        [Export]
+        public int PlayerHitPoints { get; set; }
+        [Export]
+        public int PlayerMaxHitPoints { get; set; }
 
+        [Export]
+        public bool IsInvincible { get; set; }
+
+        //player should be able to switch gun type 
+        PackedScene GunType { get; set; }
+
+        #endregion PlayerMain Properties
+
+        //Will provide the base node with animation in it from the _Ready() function
+        //This will also provide flexibility such as changing ground shadow and such.
+        internal AnimationPlayer animationHandler;
+        internal Timer playerTimer;
+
+        //public override void _Ready()
+        //{
+        //    animationHandler = GetNode<Node2D>("HappyBoo").GetNode<AnimationPlayer>("AnimationPlayer");
+        //    GetNode<Label>("HPLabel").Text = PlayerHitPoints.ToString();
+        //    SetProcess(true);
+        //}
+
+        //These are functions. Functions commonly have thse base characteristics:
+
+        /*
+         * [Access modifier]  [Return type (can be void if returning nothing)]  [Name]      [Arguments] examnple (int a, string b...ect)
+         * 
+         * So a function could simply be public int CalculateSum (int input1, int input2){}
+         * 
+         * Functions also consist of a code body that comes in brackets so say in CalculateSum()
+         * 
+         * {
+         *      Return input 1 + input 2;
+         * }
+        */
     }
+
 }
