@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bp2epwompibjk"]
+[gd_scene load_steps=6 format=3 uid="uid://bp2epwompibjk"]
 
 [ext_resource type="Script" uid="uid://3nsynwvv0pww" path="res://Characters/EnemyAssets/SlimeAssets/Scripts/GreenSlime/GreenSlime.cs" id="1_0hemc"]
 [ext_resource type="PackedScene" uid="uid://ogik4s70pgwl" path="res://Imported Assets/2d-project-start/characters/slime/slime.tscn" id="1_k3fw2"]
@@ -8,6 +8,9 @@
 radius = 50.0
 height = 100.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_0hemc"]
+radius = 389.082
+
 [node name="EnemyMobSlime" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 3
@@ -16,7 +19,7 @@ script = ExtResource("1_0hemc")
 [node name="Slime" parent="." instance=ExtResource("1_k3fw2")]
 script = ExtResource("3_50hjk")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="SlimeHitBox" type="CollisionShape2D" parent="."]
 position = Vector2(0, -34)
 shape = SubResource("CapsuleShape2D_73bb0")
 
@@ -27,3 +30,13 @@ offset_top = -124.0
 offset_right = 62.0
 offset_bottom = -97.0
 fill_mode = 2
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="LookRange" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(8, -28)
+shape = SubResource("CircleShape2D_0hemc")
+debug_color = Color(0.930677, 0.163587, 0.518398, 0.42)
+
+[connection signal="body_entered" from="Area2D" to="." method="OnTargetDetected"]
+[connection signal="body_exited" from="Area2D" to="." method="OnTargetLost"]

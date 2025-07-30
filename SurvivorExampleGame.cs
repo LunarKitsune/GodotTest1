@@ -17,6 +17,6 @@ public partial class SurvivorExampleGame : Node2D
 
     public void CanvasSizeEventHandler(object sender, EventArgs e)
     {
-        
+    
     }
 }

@@ -31,7 +31,9 @@ public abstract partial class SlimeBase : CharacterBody2D
 
     public abstract void TakeDamage(int damageTaken);
 
-    public abstract void OnTargetDetected(CharacterBody2D target);
+    public abstract void OnTargetDetected(Node2D targetBody);
+
+    public abstract void OnTargetLost(Node2D targetBody);
 
 }
 

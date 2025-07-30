@@ -50,7 +50,7 @@ public partial class PlayerStarterGun : Area2D, IFirable
 
     public void FireBullet(Node2D spawnPointRef)
     {
-        if (Input.IsActionJustPressed("Fire") && bulletReady)
+        if (Input.IsActionPressed("Fire") && bulletReady)
         {
 
             //solved bullet spawning issue by selecting "top leve" in inspector for bullet's visbility tab.
