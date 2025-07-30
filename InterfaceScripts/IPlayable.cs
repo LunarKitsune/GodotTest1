@@ -9,11 +9,9 @@ namespace Test1.InterfaceScripts
 {
     internal interface IPlayable
     {
-        string PlayerName { get; set; }
-        int PlayerHitPoints { get; set; }
-        int PlayerMaxHitPoints { get; set; }
-        bool IsInvincible { get; set; }
+        public string PlayerName { get; set; }
 
+        public PackedScene Weapon { get; set; }
 
     }
 }

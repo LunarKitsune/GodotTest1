@@ -3,8 +3,11 @@ using System;
 using Test1.Characters.PlayerAssets.Scripts.PlayerMain;
 using Test1.InterfaceScripts;
 
-public partial class HappyBoo : PlayerBase
+public partial class HappyBoo : Entity, IPlayable
 {
+    public string PlayerName { get; set; }
+
+    public PackedScene Weapon { get; set; }
     //these are player properties. These are what defines some of the players attributes
     //think of what attributes you have on your own. 
 
@@ -22,14 +25,14 @@ public partial class HappyBoo : PlayerBase
 
     public override void _Ready()
     {
-        PlayerHitPoints = 30;
+        HitPoints = 30;
         Speed = 400;
         IsInvincible = false;
-        PlayerMaxHitPoints = 50;
+        HitPointsMax = 50;
         PlayerName = "bob";
 
         animationHandler = GetNode<Node2D>("HappyBoo").GetNode<AnimationPlayer>("AnimationPlayer");
-        GetNode<Label>("HPLabel").Text = PlayerHitPoints.ToString();
+        GetNode<Label>("HPLabel").Text = HitPoints.ToString();
         SetProcess(true);
     }
 
@@ -98,10 +101,10 @@ public partial class HappyBoo : PlayerBase
     //deduct from the player's health. 
     public void TakeDamage(int damageTaken)
     {
-        PlayerHitPoints -= damageTaken;
+        HitPoints -= damageTaken;
 
-        GetNode<Label>("HPLabel").Text = PlayerHitPoints.ToString();
-        if (PlayerHitPoints <= 0)
+        GetNode<Label>("HPLabel").Text = HitPoints.ToString();
+        if (HitPoints <= 0)
         {
             QueueFree();
 
@@ -129,10 +132,12 @@ public partial class HappyBoo : PlayerBase
         }
     }
 
-    public void OnGunPickUp()
+    public override void OnWeaponPickUp()
     {
-
+        
     }
+
+ 
 
     #endregion Event Functions
 

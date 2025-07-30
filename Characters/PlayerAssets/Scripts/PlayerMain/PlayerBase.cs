@@ -8,25 +8,19 @@ using Test1.InterfaceScripts;
 
 namespace Test1.Characters.PlayerAssets.Scripts.PlayerMain
 {
-    public partial class PlayerBase : CharacterBody2D, IPlayable
+    public abstract partial class Entity : CharacterBody2D
     {
         #region PlayerMain Properties
         [Export]
         public int Speed { get; set; }
 
         [Export]
-        public string PlayerName { get; set; }
-
+        public int HitPoints { get; set; }
         [Export]
-        public int PlayerHitPoints { get; set; }
-        [Export]
-        public int PlayerMaxHitPoints { get; set; }
+        public int HitPointsMax { get; set; }
 
         [Export]
         public bool IsInvincible { get; set; }
-
-        //player should be able to switch gun type 
-        PackedScene GunType { get; set; }
 
         #endregion PlayerMain Properties
 
@@ -55,6 +49,8 @@ namespace Test1.Characters.PlayerAssets.Scripts.PlayerMain
          *      Return input 1 + input 2;
          * }
         */
+
+        public abstract void OnWeaponPickUp();
     }
 
 }
