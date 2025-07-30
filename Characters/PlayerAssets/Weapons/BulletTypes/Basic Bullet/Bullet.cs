@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Bullet : Area2D,IProjectile
+public partial class Bullet : Area2D,IProjectile, IPlayerSpawned
 {
     [Export]
     public float ProjectileSpeed { get; set; }
@@ -11,6 +11,7 @@ public partial class Bullet : Area2D,IProjectile
     public Vector2 ProjectileRange { get; set; }
     [Export]
     public bool isProjectilePiercing { get; set; }
+    public int PlayerOriginID { get; set; }
 
     public override void _Ready()
     {

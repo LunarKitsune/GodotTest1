@@ -30,4 +30,4 @@ position = Vector2(25.0131, -8.83206)
 [node name="BulletTimer" type="Timer" parent="."]
 wait_time = 1.5
 
-[connection signal="area_exited" from="." to="." method="OnGunRangeExited"]
+[connection signal="area_exited" from="." to="." method="OnBulletRangeExited"]

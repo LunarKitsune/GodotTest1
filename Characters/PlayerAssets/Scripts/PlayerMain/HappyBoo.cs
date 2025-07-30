@@ -103,6 +103,7 @@ public partial class HappyBoo : Entity, IPlayable
     {
         HitPoints -= damageTaken;
 
+        
         GetNode<Label>("HPLabel").Text = HitPoints.ToString();
         if (HitPoints <= 0)
         {
