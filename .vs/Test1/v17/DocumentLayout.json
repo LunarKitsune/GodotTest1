@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|c:\\users\\chico\\desktop\\gamedev\\godot\\repositories\\test1\\characters\\enemyassets\\greenslime\\scripts\\slimeanimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|solutionrelative:characters\\enemyassets\\greenslime\\scripts\\slimeanimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|c:\\users\\chico\\desktop\\gamedev\\godot\\repositories\\test1\\characters\\enemyassets\\greenslime\\scripts\\greenslime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|solutionrelative:characters\\enemyassets\\greenslime\\scripts\\greenslime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|c:\\users\\chico\\desktop\\gamedev\\godot\\repositories\\test1\\characters\\playerassets\\weapons\\basicgun\\playerstartergun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|solutionrelative:characters\\playerassets\\weapons\\basicgun\\playerstartergun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|c:\\users\\chico\\desktop\\gamedev\\godot\\repositories\\test1\\characters\\playerassets\\weapons\\bullettypes\\basic bullet\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|solutionrelative:characters\\playerassets\\weapons\\bullettypes\\basic bullet\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|c:\\users\\chico\\desktop\\gamedev\\godot\\repositories\\test1\\interfacescripts\\iplayable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|solutionrelative:interfacescripts\\iplayable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|c:\\users\\chico\\desktop\\gamedev\\godot\\repositories\\test1\\characters\\playerassets\\weapons\\basicgun\\playerstartergun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|solutionrelative:characters\\playerassets\\weapons\\basicgun\\playerstartergun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A7411E1-CA16-4C88-A9C5-709A3369354E}|Test1.csproj|c:\\users\\chico\\desktop\\gamedev\\godot\\repositories\\test1\\interfacescripts\\iprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,11 +38,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SlimeAnimation.cs",
+              "DocumentMoniker": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Characters\\EnemyAssets\\GreenSlime\\Scripts\\SlimeAnimation.cs",
+              "RelativeDocumentMoniker": "Characters\\EnemyAssets\\GreenSlime\\Scripts\\SlimeAnimation.cs",
+              "ToolTip": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Characters\\EnemyAssets\\GreenSlime\\Scripts\\SlimeAnimation.cs",
+              "RelativeToolTip": "Characters\\EnemyAssets\\GreenSlime\\Scripts\\SlimeAnimation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T02:20:47.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "GreenSlime.cs",
+              "DocumentMoniker": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Characters\\EnemyAssets\\GreenSlime\\Scripts\\GreenSlime.cs",
+              "RelativeDocumentMoniker": "Characters\\EnemyAssets\\GreenSlime\\Scripts\\GreenSlime.cs",
+              "ToolTip": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Characters\\EnemyAssets\\GreenSlime\\Scripts\\GreenSlime.cs",
+              "RelativeToolTip": "Characters\\EnemyAssets\\GreenSlime\\Scripts\\GreenSlime.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAmwF8AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T01:58:16.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "IPlayable.cs",
               "DocumentMoniker": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\InterfaceScripts\\IPlayable.cs",
               "RelativeDocumentMoniker": "InterfaceScripts\\IPlayable.cs",
@@ -46,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "IProjectile.cs",
               "DocumentMoniker": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\InterfaceScripts\\IProjectile.cs",
               "RelativeDocumentMoniker": "InterfaceScripts\\IProjectile.cs",
@@ -58,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Ifirable.cs",
               "DocumentMoniker": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\InterfaceScripts\\Ifirable.cs",
               "RelativeDocumentMoniker": "InterfaceScripts\\Ifirable.cs",
@@ -70,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Bullet.cs",
               "DocumentMoniker": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Characters\\PlayerAssets\\Weapons\\BulletTypes\\Basic Bullet\\Bullet.cs",
               "RelativeDocumentMoniker": "Characters\\PlayerAssets\\Weapons\\BulletTypes\\Basic Bullet\\Bullet.cs",
@@ -89,9 +123,10 @@
               "RelativeDocumentMoniker": "Characters\\PlayerAssets\\Weapons\\BasicGun\\PlayerStarterGun.cs",
               "ToolTip": "C:\\Users\\chico\\Desktop\\GameDev\\Godot\\Repositories\\test1\\Characters\\PlayerAssets\\Weapons\\BasicGun\\PlayerStarterGun.cs",
               "RelativeToolTip": "Characters\\PlayerAssets\\Weapons\\BasicGun\\PlayerStarterGun.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAmwDUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T23:03:26.14Z"
+              "WhenOpened": "2025-07-23T23:03:26.14Z",
+              "EditorCaption": ""
             }
           ]
         }

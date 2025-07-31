@@ -25,7 +25,7 @@ folder_colors={
 "res://Characters/EnemyAssets/": "blue",
 "res://Characters/EnemyAssets/GreenSlime/Scripts/": "purple",
 "res://Characters/PlayerAssets/": "blue",
-"res://Characters/PlayerAssets/Scripts/": "purple",
+"res://Characters/PlayerAssets/PlayerMain/Scripts/": "purple",
 "res://Characters/PlayerAssets/Weapons/": "yellow",
 "res://EnviornmentAssets/": "blue",
 "res://InterfaceScripts/": "purple",

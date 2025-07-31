@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c20l2e8rbue3o"]
 
-[ext_resource type="Script" uid="uid://b62qori6hhxaj" path="res://Characters/PlayerAssets/Scripts/happy_boo.gd" id="1_cn45q"]
+[ext_resource type="Script" uid="uid://b62qori6hhxaj" path="res://Characters/PlayerAssets/PlayerMain/Scripts/happy_boo.gd" id="1_cn45q"]
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://Imported Assets/2d-project-start/characters/happy_boo/happy_boo.tscn" id="2_eylbf"]
 [ext_resource type="PackedScene" uid="uid://bq6p6a0hqw3cq" path="res://Characters/PlayerAssets/Weapons/BasicGun/Player_Starter_Gun.tscn" id="4_0g85c"]
 
