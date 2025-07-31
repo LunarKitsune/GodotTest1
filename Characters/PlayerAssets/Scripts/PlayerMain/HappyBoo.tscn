@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c20l2e8rbue3o"]
+[gd_scene load_steps=6 format=3 uid="uid://c20l2e8rbue3o"]
 
-[ext_resource type="Script" uid="uid://e5d4kaewbp53" path="res://Characters/PlayerAssets/Scripts/PlayerMain/HappyBoo.cs" id="1_i8duc"]
+[ext_resource type="Script" uid="uid://b62qori6hhxaj" path="res://Characters/PlayerAssets/Scripts/happy_boo.gd" id="1_cn45q"]
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://Imported Assets/2d-project-start/characters/happy_boo/happy_boo.tscn" id="2_eylbf"]
-[ext_resource type="Script" uid="uid://bdgoybruhh0q3" path="res://Characters/PlayerAssets/Scripts/PlayerLabel.cs" id="3_ie0vr"]
 [ext_resource type="PackedScene" uid="uid://bq6p6a0hqw3cq" path="res://Characters/PlayerAssets/Weapons/BasicGun/Player_Starter_Gun.tscn" id="4_0g85c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w4b7e"]
@@ -13,11 +12,10 @@ radius = 57.0088
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 3
-script = ExtResource("1_i8duc")
+script = ExtResource("1_cn45q")
 
 [node name="HappyBoo" parent="." instance=ExtResource("2_eylbf")]
 position = Vector2(1, -1)
-script = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, -42)
@@ -30,7 +28,6 @@ offset_right = 43.0
 offset_bottom = -129.0
 text = "JIMMY D"
 horizontal_alignment = 1
-script = ExtResource("3_ie0vr")
 metadata/_edit_use_anchors_ = true
 
 [node name="HPLabel" type="Label" parent="."]

@@ -23,7 +23,7 @@ project/assembly_name="Test1"
 
 folder_colors={
 "res://Characters/EnemyAssets/": "blue",
-"res://Characters/EnemyAssets/SlimeAssets/Scripts/": "purple",
+"res://Characters/EnemyAssets/GreenSlime/Scripts/": "purple",
 "res://Characters/PlayerAssets/": "blue",
 "res://Characters/PlayerAssets/Scripts/": "purple",
 "res://Characters/PlayerAssets/Weapons/": "yellow",

@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://jyubbyv8l8fw"]
+[gd_scene load_steps=3 format=3 uid="uid://jyubbyv8l8fw"]
 
-[ext_resource type="Script" uid="uid://b20debc2yb868" path="res://Characters/PlayerAssets/Weapons/BulletTypes/Basic Bullet/Bullet.cs" id="1_vf14h"]
 [ext_resource type="Texture2D" uid="uid://dftkbqwsfd68r" path="res://Imported Assets/2d-project-start/pistol/projectile.png" id="2_usjjo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xdvae"]
@@ -11,9 +10,6 @@ height = 29.997
 top_level = true
 collision_layer = 3
 collision_mask = 2
-script = ExtResource("1_vf14h")
-ProjectileSpeed = 250.0
-ProjectileDamage = 10
 
 [node name="Projectile" type="Sprite2D" parent="."]
 position = Vector2(-11, -1)
@@ -26,4 +22,4 @@ rotation = 1.55672
 shape = SubResource("CapsuleShape2D_xdvae")
 
 [connection signal="area_exited" from="." to="." method="OnBulletRangeExit"]
-[connection signal="body_entered" from="." to="." method="OnBodyEntered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

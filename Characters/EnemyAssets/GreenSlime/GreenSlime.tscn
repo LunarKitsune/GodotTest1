@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://bp2epwompibjk"]
 
-[ext_resource type="Script" uid="uid://3nsynwvv0pww" path="res://Characters/EnemyAssets/SlimeAssets/Scripts/GreenSlime/GreenSlime.cs" id="1_0hemc"]
+[ext_resource type="Script" uid="uid://cqhmlfmwdjv2t" path="res://Characters/EnemyAssets/GreenSlime/Scripts/green_slime.gd.gd" id="1_0hemc"]
 [ext_resource type="PackedScene" uid="uid://ogik4s70pgwl" path="res://Imported Assets/2d-project-start/characters/slime/slime.tscn" id="1_k3fw2"]
-[ext_resource type="Script" uid="uid://ptdwww4ot5e3" path="res://Characters/EnemyAssets/SlimeAssets/Scripts/SlimeAnimation.cs" id="3_50hjk"]
+[ext_resource type="Script" uid="uid://ptdwww4ot5e3" path="res://Characters/EnemyAssets/GreenSlime/Scripts/SlimeAnimation.cs" id="3_50hjk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_73bb0"]
 radius = 50.0
@@ -11,7 +11,7 @@ height = 100.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_0hemc"]
 radius = 389.082
 
-[node name="EnemyMobSlime" type="CharacterBody2D"]
+[node name="GreenSlime" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_0hemc")

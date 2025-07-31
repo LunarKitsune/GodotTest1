@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://pbmyh1qru7p"]
 
-[ext_resource type="Script" uid="uid://bemw1gusaqrn2" path="res://Imported Assets/2d-project-start/characters/happy_boo/happy_boo.gd" id="1_kg7lb"]
+[ext_resource type="Script" uid="uid://b4o2qnedrjun2" path="res://Characters/PlayerAssets/Scripts/happy_boo_animation.gd" id="1_2cb1f"]
 [ext_resource type="Texture2D" uid="uid://b7rhtttevhxtj" path="res://Imported Assets/2d-project-start/characters/ground_shadow.png" id="2_62bos"]
 [ext_resource type="Texture2D" uid="uid://ng8e5ot0dtpd" path="res://Imported Assets/2d-project-start/characters/happy_boo/square_foot.png" id="3_186qq"]
 [ext_resource type="Texture2D" uid="uid://dhapxq8y8ow57" path="res://Imported Assets/2d-project-start/characters/happy_boo/square_lower_leg.png" id="4_plnsd"]
@@ -581,7 +581,7 @@ _data = {
 }
 
 [node name="HappyBoo" type="Node2D"]
-script = ExtResource("1_kg7lb")
+script = ExtResource("1_2cb1f")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
